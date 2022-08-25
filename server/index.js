@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
-app.use(express.json())
-
+const cors = require('cors')
 const port = 5001
 
+app.use(express.json())
+app.use(cors())
 app.get('/', (req, res) =>{
     res.send('hello world')
 })
@@ -17,6 +18,7 @@ app.get('/notes', (req, res) =>{
         text: 'test',
         link: 'https://google.com'
     }]
+    res.json({notes})
 })
 
 app.listen(port, () =>{
