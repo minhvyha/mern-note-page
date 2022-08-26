@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { FC } from 'react'
+import INote from '../interfaces/note.interface'
 
-function Note() {
+type Props ={
+    note: INote
+}
+
+const Note: FC<Props> = ({note}) => {
   return (
-    <div>Note</div>
+    <div>
+        <h4>{note.text}</h4>
+        <h5>{note.link}</h5>
+    </div>
   )
 }
 

@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import NOTES from './DUMMYNOTES';
 import { nanoid } from 'nanoid';
+import Note from './components/Note';
 
 function App() {
   const [notes, setNotes] = useState<Array<any>>([])
@@ -24,10 +25,10 @@ function App() {
 
   let notesElement = notes.map(note =>{
     return(
-      <div key={nanoid()}>
-        <h2>{note?.text}</h2>
-        <h5>{note?.link}</h5>
-      </div>
+      <Note 
+        key={nanoid()}
+        note={note}
+      />
       
     )
   })
