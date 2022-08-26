@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const [notes, setNotes] = useState<any[]>([])
+  const [notes, setNotes] = useState<Array<any>>([])
   const getNotes = async () =>{
     try {
       const response = await axios.get('http://localhost:5001/notes')
