@@ -21,6 +21,11 @@ html, body, #root{
   display: flex;
   flex-direction: column;
   color: rgb(0, 0, 0);
+  transform: rotate(-6deg);
+}
+.note:nth-child(even){
+  transform: rotate(4deg);
+  background-color: #7afcff;
 }
 .note-text{
   flex: 1;
