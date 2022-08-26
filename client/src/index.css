@@ -22,6 +22,8 @@ html, body, #root{
   flex-direction: column;
   color: rgb(0, 0, 0);
   transform: rotate(-6deg);
+  transition: .3s ease-in-out all;
+  position: relative;
 }
 .note:nth-child(even){
   position: relative;
@@ -37,7 +39,8 @@ html, body, #root{
 }
 
 .note:hover{
-  
+  transform: scale(1.5);
+  z-index: 5;
 }
 
 .note-text{
