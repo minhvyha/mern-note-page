@@ -9,7 +9,7 @@ const Note: FC<Props> = ({note}) => {
   return (
     <div className='note'>
         <h4 className='note-text'>{note.text}</h4>
-        <a href={note.link}>{note.link}</a>
+        <a href={note.link} className='note-link'>{note.link}</a>
     </div>
   )
 }

@@ -23,5 +23,8 @@ html, body, #root{
   color: rgb(0, 0, 0);
 }
 .note-text{
-  
+  flex: 1;
+}
+.note-link{
+  display: none;
 }
