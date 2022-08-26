@@ -12,11 +12,17 @@ html, body, #root{
 
 
 /*========= NOTE ========= */
+.notes-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .note {
   background-color: #feff9c;
   height: 10rem;
   width: 10rem;
-  margin: 1rem;
+  margin: 1.4rem;
+  padding: 1rem;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -24,6 +30,7 @@ html, body, #root{
   transform: rotate(-6deg);
   transition: .3s ease-in-out all;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .note:nth-child(even){
   position: relative;
@@ -34,7 +41,7 @@ html, body, #root{
 .note:nth-child(3n){
   transform: rotate(-3deg);
   position: relative;
-  top: 5px;
+  top: -5px;
   background-color: #ff7eb9;
 }
 
