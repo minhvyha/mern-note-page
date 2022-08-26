@@ -1,19 +1,25 @@
 import { useState, useEffect } from 'react'
 import './App.css';
 import axios from 'axios';
+import NOTES from './DUMMYNOTES';
 
 function App() {
   const [notes, setNotes] = useState<Array<any>>([])
-  const getNotes = async () =>{
-    try {
-      const response = await axios.get('http://localhost:5001/notes')
-      setNotes(response.data.notes)
-    }
-    catch(err){
-      console.log(err)
-    }
-    console.log(notes)
-  };
+
+  useEffect(() =>{
+    setNotes(NOTES)
+  }, [])
+
+  // const getNotes = async () =>{
+  //   try {
+  //     const response = await axios.get('http://localhost:5001/notes')
+  //     setNotes(response.data.notes)
+  //   }
+  //   catch(err){
+  //     console.log(err)
+  //   }
+  //   console.log(notes)
+  // };
 
   let notesElement = notes.map(note =>{
     return(
@@ -33,7 +39,7 @@ function App() {
       </div>
       
       <div>
-        <button onClick={getNotes}>Click Me!</button>
+        <button>Click me!</button>
       </div>
 
       <div className="data">
