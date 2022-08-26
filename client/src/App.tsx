@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css';
 import axios from 'axios';
 import NOTES from './DUMMYNOTES';
+import { nanoid } from 'nanoid';
 
 function App() {
   const [notes, setNotes] = useState<Array<any>>([])
@@ -23,10 +24,11 @@ function App() {
 
   let notesElement = notes.map(note =>{
     return(
-      <>
+      <div key={nanoid()}>
         <h2>{note?.text}</h2>
         <h5>{note?.link}</h5>
-      </>
+      </div>
+      
     )
   })
 
@@ -36,14 +38,9 @@ function App() {
     <div className="App">
       <div>
         <h1>Notes Application</h1>
-      </div>
-      
-      <div>
-        <button>Click me!</button>
-      </div>
-
-      <div className="data">
-        {notesElement}
+        <div className="notes-list">
+          {notesElement}
+        </div>
       </div>
     </div>
   );
