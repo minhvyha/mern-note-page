@@ -11,6 +11,10 @@ function App() {
     setNotes(NOTES);
   }, []);
 
+  const onNoteUpdated = () =>{
+    
+  }
+
   // const getNotes = async () =>{
   //   try {
   //     const response = await axios.get('http://localhost:5001/notes')
