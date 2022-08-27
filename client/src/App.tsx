@@ -12,6 +12,10 @@ function App() {
     setNotes(NOTES);
   }, []);
 
+  useEffect(() =>{
+
+  }, [notes])
+
   const onNoteUpdated = (note: INote) => {
     setNotes(notes => notes.map((oldNote: INote) =>{
       return note._id === oldNote._id ? 
