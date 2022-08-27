@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, FocusEvent } from "react";
 import INote from "../interfaces/note.interface";
 
 type Props = {
   note: INote;
 };
 
-const noteTextUpdated = () =>{
-  
+const noteTextUpdated = (event: FocusEvent<HTMLHeadingElement>) =>{
+  console.log(event)
 }
 
 const Note: FC<Props> = ({ note }) => {
