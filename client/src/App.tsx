@@ -19,7 +19,6 @@ function App() {
       :
       oldNote
     }))
-    console.log(notes)
   };
 
   // const getNotes = async () =>{
