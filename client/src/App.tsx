@@ -14,9 +14,8 @@ function App() {
 
   const onNoteUpdated = (note: INote) => {
     setNotes(notes => notes.map((oldNote: INote) =>{
-      return note._id === oldNote._id ? {
-        ...note
-      }
+      return note._id === oldNote._id ? 
+      note
       :
       oldNote
     }))
