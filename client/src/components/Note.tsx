@@ -8,7 +8,7 @@ type Props ={
 const Note: FC<Props> = ({note}) => {
   return (
     <div className='note'>
-        <h4 className='note-text'>{note.text}</h4>
+        <h4 className='note-text' contentEditable>{note.text}</h4>
         <a href={note.link} className='note-link'>{note.link}</a>
     </div>
   )
