@@ -6,10 +6,17 @@ import Note from "./components/Note";
 import INote from "./interfaces/note.interface";
 
 function App() {
-  const [notes, setNotes] = useState<Array<any>>([]);
+  const [notes, setNotes] = useState<Array<INote>>([]);
 
   useEffect(() => {
-    setNotes(NOTES);
+    const localNotes: string = localStorage.getItem("notes") || "[]";
+    if (localNotes !== "[]") {
+      let newNote = JSON.parse(localNotes);
+      console.log(newNote);
+      setNotes(newNote);
+    } else {
+      setNotes(NOTES);
+    }
   }, []);
 
   useEffect(() => {
