@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   const onNoteUpdated = (text: string) => {
-    console.log(text)
+    console.log(text);
   };
 
   // const getNotes = async () =>{
@@ -27,7 +27,10 @@ function App() {
   // };
 
   let notesElement = notes.map((note) => {
-    return <Note key={nanoid()} onNoteUpdated={onNoteUpdated} note={note} />;
+    let key = nanoid();
+    return (
+      <Note key={key} onNoteUpdated={onNoteUpdated} note={note} id={key} />
+    );
   });
 
   return (

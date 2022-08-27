@@ -3,7 +3,8 @@ import INote from "../interfaces/note.interface";
 
 type Props = {
   note: INote;
-  onNoteUpdated: Function;
+  onNoteUpdated: (note: INote) => void;
+  id: string;
 };
 
 const Note: FC<Props> = ({ note, onNoteUpdated }) => {
