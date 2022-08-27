@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   useEffect(() =>{
-
+    localStorage.setItem()
   }, [notes])
 
   const onNoteUpdated = (note: INote) => {
