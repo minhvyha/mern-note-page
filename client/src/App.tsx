@@ -9,11 +9,18 @@ function App() {
   const [notes, setNotes] = useState<Array<any>>([]);
 
   useEffect(() => {
-    setNotes(NOTES);
+    const localNotes = localStorage.getItem('notes')
+    console.log(localNotes)
+    if (localNotes){
+      setNotes(JSON.parse(localNotes))
+    }
+    else{
+      setNotes(NOTES);
+    }
   }, []);
 
   useEffect(() =>{
-    localStorage.setItem()
+    localStorage.setItem('notes', JSON.stringify(notes))
   }, [notes])
 
   const onNoteUpdated = (note: INote) => {
