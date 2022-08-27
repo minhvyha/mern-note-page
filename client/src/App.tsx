@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios';
-import NOTES from './DUMMYNOTES';
-import { nanoid } from 'nanoid';
-import Note from './components/Note';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import NOTES from "./DUMMYNOTES";
+import { nanoid } from "nanoid";
+import Note from "./components/Note";
 
 function App() {
-  const [notes, setNotes] = useState<Array<any>>([])
+  const [notes, setNotes] = useState<Array<any>>([]);
 
-  useEffect(() =>{
-    setNotes(NOTES)
-  }, [])
+  useEffect(() => {
+    setNotes(NOTES);
+  }, []);
 
   // const getNotes = async () =>{
   //   try {
@@ -22,24 +22,14 @@ function App() {
   //   console.log(notes)
   // };
 
-  let notesElement = notes.map(note =>{
-    return(
-      <Note 
-        key={nanoid()}
-        note={note}
-      />
-      
-    )
-  })
-
-
+  let notesElement = notes.map((note) => {
+    return <Note key={nanoid()} note={note} />;
+  });
 
   return (
     <div className="App">
       <div>
-        <div className="notes-list">
-          {notesElement}
-        </div>
+        <div className="notes-list">{notesElement}</div>
       </div>
     </div>
   );

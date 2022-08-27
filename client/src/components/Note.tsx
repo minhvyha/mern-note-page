@@ -1,17 +1,21 @@
-import React, { FC } from 'react'
-import INote from '../interfaces/note.interface'
+import React, { FC } from "react";
+import INote from "../interfaces/note.interface";
 
-type Props ={
-    note: INote
-}
+type Props = {
+  note: INote;
+};
 
-const Note: FC<Props> = ({note}) => {
+const Note: FC<Props> = ({ note }) => {
   return (
-    <div className='note'>
-        <h4 className='note-text' contentEditable>{note.text}</h4>
-        <a href={note.link} className='note-link'>{note.link}</a>
+    <div className="note">
+      <h4 className="note-text" contentEditable>
+        {note.text}
+      </h4>
+      <a href={note.link} className="note-link">
+        {note.link}
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default Note
+export default Note;
