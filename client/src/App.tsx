@@ -11,9 +11,7 @@ function App() {
     setNotes(NOTES);
   }, []);
 
-  const onNoteUpdated = () =>{
-    
-  }
+  const onNoteUpdated = () => {};
 
   // const getNotes = async () =>{
   //   try {
@@ -27,7 +25,7 @@ function App() {
   // };
 
   let notesElement = notes.map((note) => {
-    return <Note key={nanoid()} note={note} />;
+    return <Note key={nanoid()} onNoteUpdated={onNoteUpdated} note={note} />;
   });
 
   return (
