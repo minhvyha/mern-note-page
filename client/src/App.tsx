@@ -11,7 +11,9 @@ function App() {
     setNotes(NOTES);
   }, []);
 
-  const onNoteUpdated = () => {};
+  const onNoteUpdated = (text: string) => {
+    console.log(text)
+  };
 
   // const getNotes = async () =>{
   //   try {
