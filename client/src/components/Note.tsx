@@ -4,14 +4,16 @@ import INote from "../interfaces/note.interface";
 type Props = {
   note: INote;
   onNoteUpdated: (note: INote) => void;
-  id: string;
 };
 
 const Note: FC<Props> = ({ note, onNoteUpdated }) => {
 
   const noteTextUpdated = (event: FocusEvent<HTMLHeadingElement>) => {
-
-    onNoteUpdated(event.currentTarget.textContent)
+    const newNote:INote = {
+      ...note,
+      text: event.currentTarget.textContent || ''
+    }
+    onNoteUpdated(newNote)
   };
 
   return (

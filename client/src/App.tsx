@@ -3,6 +3,7 @@ import axios from "axios";
 import NOTES from "./DUMMYNOTES";
 import { nanoid } from "nanoid";
 import Note from "./components/Note";
+import INote from "./interfaces/note.interface";
 
 function App() {
   const [notes, setNotes] = useState<Array<any>>([]);
@@ -11,8 +12,15 @@ function App() {
     setNotes(NOTES);
   }, []);
 
-  const onNoteUpdated = (text: string) => {
-    console.log(text);
+  const onNoteUpdated = (note: INote) => {
+    setNotes(notes => notes.map((oldNote: INote) =>{
+      return note._id === oldNote._id ? {
+        ...note
+      }
+      :
+      oldNote
+    }))
+    console.log(notes)
   };
 
   // const getNotes = async () =>{
@@ -27,9 +35,8 @@ function App() {
   // };
 
   let notesElement = notes.map((note) => {
-    let key = nanoid();
     return (
-      <Note key={key} onNoteUpdated={onNoteUpdated} note={note} id={key} />
+      <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />
     );
   });
 
