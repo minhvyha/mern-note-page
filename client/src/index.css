@@ -52,6 +52,7 @@ html, body, #root{
 
 .note-text{
   flex: 1;
+  text-align: center;
 }
 .note-link{
   display: none;
