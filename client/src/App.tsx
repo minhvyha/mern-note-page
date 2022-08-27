@@ -7,9 +7,11 @@ import INote from "./interfaces/note.interface";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
+  const [count, setCount] = useState<number>(0)
 
   useEffect(() => {
     const localNotes: string = localStorage.getItem("notes") || "[]";
+    console.log(localNotes)
     if (localNotes !== "[]") {
       let newNote = JSON.parse(localNotes);
       console.log(newNote);
@@ -22,9 +24,10 @@ function App() {
   useEffect(() => {
     const saveNotes = JSON.stringify(notes);
     localStorage.setItem("notes", saveNotes);
-  }, [notes]);
+  }, [count]);
 
   const onNoteUpdated = (note: INote) => {
+    setCount(x => x + 1)
     setNotes((notes) =>
       notes.map((oldNote: INote) => {
         return note._id === oldNote._id ? note : oldNote;

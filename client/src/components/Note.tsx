@@ -9,6 +9,9 @@ type Props = {
 const Note: FC<Props> = ({ note, onNoteUpdated }) => {
 
   const noteTextUpdated = (event: FocusEvent<HTMLHeadingElement>) => {
+    if (event.target.textContent === note.text){
+      return
+    }
     const newNote:INote = {
       ...note,
       text: event.currentTarget.textContent || ''
