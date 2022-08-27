@@ -9,27 +9,20 @@ function App() {
   const [notes, setNotes] = useState<Array<any>>([]);
 
   useEffect(() => {
-    const localNotes = localStorage.getItem('notes')
-    console.log(localNotes)
-    if (localNotes){
-      setNotes(JSON.parse(localNotes))
-    }
-    else{
-      setNotes(NOTES);
-    }
+    setNotes(NOTES);
   }, []);
 
-  useEffect(() =>{
-    localStorage.setItem('notes', JSON.stringify(notes))
-  }, [notes])
+  useEffect(() => {
+    const saveNotes = JSON.stringify(notes);
+    localStorage.setItem("notes", saveNotes);
+  }, [notes]);
 
   const onNoteUpdated = (note: INote) => {
-    setNotes(notes => notes.map((oldNote: INote) =>{
-      return note._id === oldNote._id ? 
-      note
-      :
-      oldNote
-    }))
+    setNotes((notes) =>
+      notes.map((oldNote: INote) => {
+        return note._id === oldNote._id ? note : oldNote;
+      })
+    );
   };
 
   // const getNotes = async () =>{
@@ -44,9 +37,7 @@ function App() {
   // };
 
   let notesElement = notes.map((note) => {
-    return (
-      <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />
-    );
+    return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />;
   });
 
   return (
