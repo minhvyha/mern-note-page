@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css';
 import axios from 'axios';
 import NOTES from './DUMMYNOTES';
 import { nanoid } from 'nanoid';
@@ -38,7 +37,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Notes Application</h1>
         <div className="notes-list">
           {notesElement}
         </div>

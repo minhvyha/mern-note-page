@@ -56,3 +56,7 @@ html, body, #root{
 .note-link{
   display: none;
 }
+
+/* flex-direction: column;
+    align-items: center;
+} */
