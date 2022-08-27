@@ -9,8 +9,8 @@ type Props = {
 const Note: FC<Props> = ({ note, onNoteUpdated }) => {
 
   const noteTextUpdated = (event: FocusEvent<HTMLHeadingElement>) => {
-    console.log(event.currentTarget.textContent);
-    onNoteUpdated()
+
+    onNoteUpdated(event.currentTarget.textContent)
   };
 
   return (
