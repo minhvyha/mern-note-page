@@ -13,6 +13,6 @@ router.get('/', (req, res) =>{
     res.json({notes})
 })
 
-module.exports = function() {
-    return router
+module.exports = {
+    router
 }
