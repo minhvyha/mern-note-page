@@ -5,6 +5,7 @@ const port = 5001
 
 app.use(express.json())
 app.use(cors())
+
 app.get('/', (req, res) =>{
     res.send('hello world')
 })
