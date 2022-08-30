@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/getNote', (req, res) =>{
-
+  NoteModel.find()
 })
 
 
