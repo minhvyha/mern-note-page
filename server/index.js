@@ -5,12 +5,13 @@ const NoteModel = require('./models/Note')
 
 
 
-const port = 5001;
+const port = 3001;
 const app = express();
 mongoose.connect(`mongodb+srv://minhvy:SH8Z5aEju51aQUPT@cluster0.lo27vwn.mongodb.net/notedatabse?retryWrites=true&w=majority`)
 
 app.use(express.json());
 app.use(cors());
+
 
 app.use('/getNote', (req, res) =>{
   NoteModel.find({}, (err, result) =>{
@@ -18,7 +19,7 @@ app.use('/getNote', (req, res) =>{
       res.json(err)
     }
     else{
-      res.json(result)
+      res.json(result) 
     }
 
   })
