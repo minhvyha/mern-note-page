@@ -9,7 +9,9 @@ mongoose.connect("mongodb+srv://minhvy:<password>@cluster0.lo27vwn.mongodb.net/n
 app.use(express.json());
 app.use(cors());
 
+app.use('/getNote', (req, res) =>{
 
+})
 
 
 app.listen(port, () => {
