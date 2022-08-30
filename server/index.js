@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require('mongoose')
+const NoteModel = require('./models/Note')
 
 const port = 5001;
 const app = express();
