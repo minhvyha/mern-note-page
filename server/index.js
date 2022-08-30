@@ -12,6 +12,12 @@ app.use(cors());
 
 app.use('/getNote', (req, res) =>{
   NoteModel.find({}, (err, result) =>{
+    if (err) {
+
+    }
+    else{
+      res.json(result)
+    }
 
   })
 })
