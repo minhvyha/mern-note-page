@@ -25,8 +25,11 @@ app.get('/getNote', (req, res) =>{
   })
 })
 
-app.post('/createNote', (req, res) =>{
-  
+app.post('/createNote', async (req, res) =>{
+  const note = req.body
+  const newNote = new NoteModel(note)
+  await newNote.save()
+  res.json(note)
 })
 
 app.get('/', (req, res) =>{
