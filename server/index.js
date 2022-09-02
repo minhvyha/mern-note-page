@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 
-app.use('/getNote', (req, res) =>{
+app.get('/getNote', (req, res) =>{
   NoteModel.find({}, (err, result) =>{
     if (err) {
       res.json(err)
@@ -23,6 +23,10 @@ app.use('/getNote', (req, res) =>{
     }
 
   })
+})
+
+app.post('/createNote', (req, res) =>{
+  
 })
 
 app.get('/', (req, res) =>{
