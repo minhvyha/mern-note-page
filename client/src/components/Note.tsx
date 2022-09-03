@@ -8,25 +8,26 @@ type Props = {
 };
 
 const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
-
   const noteTextUpdated = (event: FocusEvent<HTMLHeadingElement>) => {
-    if (event.target.textContent === note.text){
-      return
+    if (event.target.textContent === note.text) {
+      return;
     }
-    const newNote:INote = {
+    const newNote: INote = {
       ...note,
-      text: event.currentTarget.textContent || ''
-    }
-    onNoteUpdated(newNote)
+      text: event.currentTarget.textContent || "",
+    };
+    onNoteUpdated(newNote);
   };
 
-  const onDeleteNote = () =>{
-    onDelete(note)
-  }
+  const onDeleteNote = () => {
+    onDelete(note);
+  };
 
   return (
     <div className="note">
-      <span className="material-symbols-outlined" onClick={onDeleteNote}>close</span>
+      <span className="material-symbols-outlined" onClick={onDeleteNote}>
+        close
+      </span>
       <h4
         onBlur={noteTextUpdated}
         suppressContentEditableWarning={true}
