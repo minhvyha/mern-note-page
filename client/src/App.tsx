@@ -35,7 +35,7 @@ function App() {
   };
 
   const onCreate = async (text: string, link: string) =>{
-
+    
   }
 
   let notesElement = notes.map((note) => {
