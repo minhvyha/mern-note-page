@@ -67,7 +67,14 @@ body,
   display: none;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined.cross {
   cursor: pointer;
   width: max-content;
+}
+.material-symbols-outlined.circle{
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  font-size: 38px;
+  cursor: pointer;
 }

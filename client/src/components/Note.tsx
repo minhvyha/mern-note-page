@@ -25,7 +25,7 @@ const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
 
   return (
     <div className="note">
-      <span className="material-symbols-outlined" onClick={onDeleteNote}>
+      <span className="material-symbols-outlined cross" onClick={onDeleteNote}>
         close
       </span>
       <h4

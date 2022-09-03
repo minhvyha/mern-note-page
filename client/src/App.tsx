@@ -48,7 +48,7 @@ function App() {
     <div className="App">
       <div>
         <div className="notes-list">{notesElement}</div>
-        <span className="material-symbols-outlined">add_circle</span>
+        <span className="material-symbols-outlined circle">add_circle</span>
       </div>
     </div>
   );
