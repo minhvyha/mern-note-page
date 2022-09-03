@@ -25,6 +25,20 @@ app.get('/getNote', (req, res) =>{
   })
 })
 
+app.post('/modifyNote', async (req, res) =>{
+  const note = req.body
+  let text = note.text
+  let link = note.link
+  NoteModel.findByIdAndUpdate(note._id, {text, link}, (err, result) =>{
+    if (err){
+      res.json(err)
+    }
+    else{
+      res.json(result)
+    }
+  })
+})
+
 app.post('/createNote', async (req, res) =>{
   const note = req.body
   const newNote = new NoteModel(note)
