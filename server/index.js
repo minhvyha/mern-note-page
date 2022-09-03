@@ -39,6 +39,13 @@ app.post('/modifyNote', async (req, res) =>{
   })
 })
 
+app.post('/deleteNote', async (req, res) =>{
+  const id = req.body._id
+  NoteModel.deleteOne({_id: id}).then(result =>{
+    res.json(result)
+  })
+})
+
 app.post('/createNote', async (req, res) =>{
   const note = req.body
   const newNote = new NoteModel(note)
