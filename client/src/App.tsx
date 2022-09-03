@@ -7,27 +7,14 @@ import INote from "./interfaces/note.interface";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
-  const [count, setCount] = useState<number>(0)
+  const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
-    const localNotes: string = localStorage.getItem("notes") || "[]";
-    console.log(localNotes)
-    if (localNotes !== "[]") {
-      let newNote = JSON.parse(localNotes);
-      console.log(newNote);
-      setNotes(newNote);
-    } else {
-      setNotes(NOTES);
-    }
+    getNotes();
   }, []);
 
-  useEffect(() => {
-    const saveNotes = JSON.stringify(notes);
-    localStorage.setItem("notes", saveNotes);
-  }, [count]);
-
   const onNoteUpdated = (note: INote) => {
-    setCount(x => x + 1)
+    setCount((x) => x + 1);
     setNotes((notes) =>
       notes.map((oldNote: INote) => {
         return note._id === oldNote._id ? note : oldNote;
@@ -35,17 +22,15 @@ function App() {
     );
   };
 
-  // const getNotes = async () =>{
-  //   try {
-  //     const response = await axios.get('http://localhost:5001/notes')
-  //     setNotes(response.data.notes)
-  //   }
-  //   catch(err){
-  //     console.log(err)
-  //   }
-  //   console.log(notes)
-  // };
-
+  const getNotes = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/getNote");
+      setNotes(response.data)
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
   let notesElement = notes.map((note) => {
     return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />;
   });
