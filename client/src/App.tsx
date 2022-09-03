@@ -34,9 +34,7 @@ function App() {
     getNotes();
   };
 
-  const onCreate = async (text: string, link: string) =>{
-    
-  }
+  const onCreate = async (text: string, link: string) => {};
 
   let notesElement = notes.map((note) => {
     return (
@@ -54,7 +52,7 @@ function App() {
       <div>
         <div className="notes-list">{notesElement}</div>
         <span className="material-symbols-outlined circle">add_circle</span>
-        <Form onCreate={onCreate}/>
+        <Form onCreate={onCreate} />
       </div>
     </div>
   );
