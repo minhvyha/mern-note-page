@@ -7,7 +7,7 @@ type Props = {
   onDelete: (note: INote) => void;
 };
 
-const Note: FC<Props> = ({ note, onNoteUpdated }) => {
+const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
 
   const noteTextUpdated = (event: FocusEvent<HTMLHeadingElement>) => {
     if (event.target.textContent === note.text){
@@ -20,9 +20,13 @@ const Note: FC<Props> = ({ note, onNoteUpdated }) => {
     onNoteUpdated(newNote)
   };
 
+  const onDeleteNote = () =>{
+    onDelete(note)
+  }
+
   return (
     <div className="note">
-      <span className="material-symbols-outlined">close</span>
+      <span className="material-symbols-outlined" onClick={onDeleteNote}>close</span>
       <h4
         onBlur={noteTextUpdated}
         suppressContentEditableWarning={true}

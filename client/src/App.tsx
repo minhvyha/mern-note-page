@@ -30,7 +30,7 @@ function App() {
 
   const onDelete = async (note: INote) => {
     const newNotes = [];
-    notes.map((oldNote) => {
+    notes.forEach((oldNote) => {
       if (oldNote._id !== note._id) {
         newNotes.push(oldNote);
       }
