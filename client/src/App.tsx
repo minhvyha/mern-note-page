@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import NOTES from "./DUMMYNOTES";
-import { nanoid } from "nanoid";
 import Note from "./components/Note";
 import INote from "./interfaces/note.interface";
 
