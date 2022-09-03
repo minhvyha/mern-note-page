@@ -12,7 +12,7 @@ body,
 }
 .App {
   min-height: 100%;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-bottom: 60px;
 }
 
@@ -67,14 +67,25 @@ body,
   display: none;
 }
 
+/*========= ICON ========= */
 .material-symbols-outlined.cross {
   cursor: pointer;
   width: max-content;
 }
-.material-symbols-outlined.circle{
+.material-symbols-outlined.circle {
   position: absolute;
   bottom: 8%;
   right: 8%;
   font-size: 38px;
   cursor: pointer;
+}
+
+/*========= CREATE FORM ========= */
+.create-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
