@@ -19,7 +19,7 @@ function App() {
         return note._id === oldNote._id ? note : oldNote;
       })
     );
-    axios.post('http://localhost:3001/createNote', )
+    axios.post('http://localhost:3001/modifyNote', note)
   };
 
   const getNotes = async () => {
