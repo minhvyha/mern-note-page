@@ -67,10 +67,7 @@ body,
   display: none;
 }
 
-/* flex-direction: column;
-    align-items: center;
-} */
-.material-symbols-outlined{
+.material-symbols-outlined {
   cursor: pointer;
   width: max-content;
 }

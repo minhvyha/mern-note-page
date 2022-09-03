@@ -30,16 +30,24 @@ function App() {
 
   const onDelete = async (note: INote) => {
     await axios.post("http://localhost:3001/deleteNote", note);
-    getNotes()
+    getNotes();
   };
 
   let notesElement = notes.map((note) => {
-    return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} onDelete={onDelete}/>;
+    return (
+      <Note
+        key={note._id}
+        onNoteUpdated={onNoteUpdated}
+        note={note}
+        onDelete={onDelete}
+      />
+    );
   });
 
   return (
     <div className="App">
       <div>
+        <button className="createBtn">Create Note</button>
         <div className="notes-list">{notesElement}</div>
       </div>
     </div>
