@@ -14,12 +14,9 @@ function App() {
   }, []);
 
   const onNoteUpdated = (note: INote) => {
-    setCount((x) => x + 1);
-    setNotes((notes) =>
-      notes.map((oldNote: INote) => {
-        return note._id === oldNote._id ? note : oldNote;
-      })
-    );
+    axios.post('http://localhost:3001/createNote', {text:note.text, link:note.link}).then(response =>{
+      
+    })
   };
 
   const getNotes = async () => {
