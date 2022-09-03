@@ -7,7 +7,6 @@ import INote from "./interfaces/note.interface";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
-  const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
     getNotes();
