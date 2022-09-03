@@ -21,6 +21,7 @@ const Note: FC<Props> = ({ note, onNoteUpdated }) => {
 
   return (
     <div className="note">
+      <span className="material-symbols-outlined">close</span>
       <h4
         onBlur={noteTextUpdated}
         suppressContentEditableWarning={true}

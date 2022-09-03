@@ -67,3 +67,7 @@ body,
 /* flex-direction: column;
     align-items: center;
 } */
+.material-symbols-outlined{
+  display: flex;
+  justify-content: flex-end;
+}
