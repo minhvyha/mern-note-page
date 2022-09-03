@@ -28,7 +28,15 @@ function App() {
     }
   };
   
-  
+  const onDelete = async (note: INote) =>{
+    const newNotes = []
+    notes.map(oldNote =>{
+      if (oldNote._id !== note._id){
+        newNotes.push(oldNote)
+      }
+    })
+    await axios.post('http://localhost:3001/deleteNote', note)
+  }
 
   let notesElement = notes.map((note) => {
     return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />;
