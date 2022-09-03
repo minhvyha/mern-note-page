@@ -47,8 +47,8 @@ function App() {
   return (
     <div className="App">
       <div>
-        <button className="createBtn">Create Note</button>
         <div className="notes-list">{notesElement}</div>
+        <span className="material-symbols-outlined">add_circle</span>
       </div>
     </div>
   );
