@@ -4,6 +4,7 @@ import INote from "../interfaces/note.interface";
 type Props = {
   note: INote;
   onNoteUpdated: (note: INote) => void;
+  onDelete: (note: INote) => void;
 };
 
 const Note: FC<Props> = ({ note, onNoteUpdated }) => {

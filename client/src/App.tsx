@@ -39,7 +39,7 @@ function App() {
   };
 
   let notesElement = notes.map((note) => {
-    return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />;
+    return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} onDelete={onDelete}/>;
   });
 
   return (
