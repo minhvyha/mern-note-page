@@ -29,13 +29,8 @@ function App() {
   };
 
   const onDelete = async (note: INote) => {
-    const newNotes = [];
-    notes.forEach((oldNote) => {
-      if (oldNote._id !== note._id) {
-        newNotes.push(oldNote);
-      }
-    });
     await axios.post("http://localhost:3001/deleteNote", note);
+    getNotes()
   };
 
   let notesElement = notes.map((note) => {
