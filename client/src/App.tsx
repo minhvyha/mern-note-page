@@ -34,7 +34,9 @@ function App() {
     getNotes();
   };
 
-  
+  const onCreate = async (note: INote) =>{
+    
+  }
 
   let notesElement = notes.map((note) => {
     return (
