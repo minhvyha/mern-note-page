@@ -16,27 +16,27 @@ function App() {
         return note._id === oldNote._id ? note : oldNote;
       })
     );
-    axios.post('http://localhost:3001/modifyNote', note)
+    axios.post("http://localhost:3001/modifyNote", note);
   };
 
   const getNotes = async () => {
     try {
       const response = await axios.get("http://localhost:3001/getNote");
-      setNotes(response.data)
+      setNotes(response.data);
     } catch (err) {
       console.log(err);
     }
   };
-  
-  const onDelete = async (note: INote) =>{
-    const newNotes = []
-    notes.map(oldNote =>{
-      if (oldNote._id !== note._id){
-        newNotes.push(oldNote)
+
+  const onDelete = async (note: INote) => {
+    const newNotes = [];
+    notes.map((oldNote) => {
+      if (oldNote._id !== note._id) {
+        newNotes.push(oldNote);
       }
-    })
-    await axios.post('http://localhost:3001/deleteNote', note)
-  }
+    });
+    await axios.post("http://localhost:3001/deleteNote", note);
+  };
 
   let notesElement = notes.map((note) => {
     return <Note key={note._id} onNoteUpdated={onNoteUpdated} note={note} />;
