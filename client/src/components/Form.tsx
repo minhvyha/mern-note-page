@@ -7,6 +7,7 @@ type Props = {
 const Form: FC<Props> = ({ onCreate }) => {
     return (
         <>
+          <input type="text" />
         </>
     )
 };

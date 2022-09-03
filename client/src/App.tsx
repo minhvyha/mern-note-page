@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Note from "./components/Note";
 import INote from "./interfaces/note.interface";
+import Form from "./components/Form";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
@@ -33,6 +34,8 @@ function App() {
     getNotes();
   };
 
+  
+
   let notesElement = notes.map((note) => {
     return (
       <Note
@@ -49,6 +52,7 @@ function App() {
       <div>
         <div className="notes-list">{notesElement}</div>
         <span className="material-symbols-outlined circle">add_circle</span>
+        <Form />
       </div>
     </div>
   );
