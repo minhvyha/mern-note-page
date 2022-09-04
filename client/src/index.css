@@ -96,3 +96,8 @@ body,
   padding: 12px 24px;
   border-radius: .5rem;
 }
+.form-text, .form-link{
+  display: flex;
+  justify-content: space-between;
+  gap: .3rem;
+}
