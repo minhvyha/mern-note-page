@@ -16,7 +16,7 @@ const Form: FC<Props> = ({ onCreate }) => {
           <span>Link: </span>
           <input id="link-input" type="text" />
         </div>
-        <div>
+        <div className="form-btn">
           <button>Close</button>
           <button>Create</button>
         </div>

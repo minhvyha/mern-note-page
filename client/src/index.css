@@ -102,3 +102,8 @@ body,
   justify-content: space-between;
   gap: 0.3rem;
 }
+.form-btn{
+  display: flex;
+  justify-content: flex-end;
+  gap: .3rem;
+}
