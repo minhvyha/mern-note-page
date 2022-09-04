@@ -92,5 +92,7 @@ body,
   background-color: rgba(0, 0, 0, 0.4);
 }
 .create-form{
-  background-color: black;
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: .5rem;
 }

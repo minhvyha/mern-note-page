@@ -8,11 +8,11 @@ const Form: FC<Props> = ({ onCreate }) => {
   return (
     <div className="create-container">
       <div className="create-form">
-        <div>
+        <div className="form-text">
           <span>Text: </span>
           <input type="text" />
         </div>
-        <div>
+        <div className="form-link">
           <span>Link: </span>
           <input id="link-input" type="text" />
         </div>
