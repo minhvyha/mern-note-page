@@ -110,7 +110,10 @@ body,
   justify-content: flex-end;
   gap: 0.3rem;
 }
-.form-close{
+.form-close-container{
   display: flex;
   justify-content: flex-end;
+}
+.form-close{
+  cursor: pointer;
 }
