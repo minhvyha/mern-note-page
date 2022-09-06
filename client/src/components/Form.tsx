@@ -8,6 +8,7 @@ const Form: FC<Props> = ({ onCreate }) => {
   return (
     <div className="create-container">
       <div className="create-form">
+        <span className="material-symbols-outlined form-close">close</span>
         <div className="form-text">
           <span>Text: </span>
           <input type="text" />
