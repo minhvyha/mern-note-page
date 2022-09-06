@@ -12,6 +12,10 @@ function App() {
     getNotes();
   }, []);
 
+  const handleClose = () =>{
+    setIsOpenFrom(false)
+  }
+
   const onNoteUpdated = (note: INote) => {
     setNotes((notes) =>
       notes.map((oldNote: INote) => {
