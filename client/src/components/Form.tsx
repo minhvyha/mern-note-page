@@ -20,7 +20,7 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
         </div>
         <div className="form-text">
           <span>Text: </span>
-          <input type="text" />
+          <input id="text-input" type="text" />
         </div>
         <div className="form-link">
           <span>Link: </span>
