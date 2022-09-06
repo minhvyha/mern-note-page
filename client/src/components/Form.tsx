@@ -1,7 +1,7 @@
 import React, { FC, FocusEvent } from "react";
 
 type Props = {
-  onCreate: (text: string, link: string) => void;
+  onCreate: () => void;
   handleClose: () => void;
   updateText: () => void;
   updateLink: () => void;
