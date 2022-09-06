@@ -11,7 +11,12 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
     <div className="create-container">
       <div className="create-form">
         <div className="form-close-container">
-          <span onClick={handleClose} className="material-symbols-outlined form-close">close</span>
+          <span
+            onClick={handleClose}
+            className="material-symbols-outlined form-close"
+          >
+            close
+          </span>
         </div>
         <div className="form-text">
           <span>Text: </span>
