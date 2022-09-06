@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
-  return (
+  return isOpen ? (
     <div className="create-container">
       <div className="create-form">
         <div className="form-close-container">
@@ -27,6 +27,8 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
         </div>
       </div>
     </div>
+  ) : (
+    <div></div>
   );
 };
 
