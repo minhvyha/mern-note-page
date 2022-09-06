@@ -6,7 +6,7 @@ import Form from "./components/Form";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
-  const [isOpenForm, setIsOpenFrom] = useState<Boolean>(true);
+  const [isOpenForm, setIsOpenFrom] = useState<Boolean>(false);
 
   useEffect(() => {
     getNotes();
