@@ -8,7 +8,13 @@ type Props = {
   isOpen: Boolean;
 };
 
-const Form: FC<Props> = ({ onCreate, isOpen, handleClose, updateLink, updateText }) => {
+const Form: FC<Props> = ({
+  onCreate,
+  isOpen,
+  handleClose,
+  updateLink,
+  updateText,
+}) => {
   return isOpen ? (
     <div className="create-container">
       <div className="create-form">
@@ -26,7 +32,7 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose, updateLink, updateText
         </div>
         <div className="form-link">
           <span>Link: </span>
-          <input id="link-input" type="text" onChange={updateLink}/>
+          <input id="link-input" type="text" onChange={updateLink} />
         </div>
         <div className="form-btn">
           <button onClick={handleClose}>Close</button>
