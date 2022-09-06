@@ -6,15 +6,15 @@ import Form from "./components/Form";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
-  const [isOpenForm, setIsOpenFrom] = useState<Boolean>(false)
+  const [isOpenForm, setIsOpenFrom] = useState<Boolean>(false);
 
   useEffect(() => {
     getNotes();
   }, []);
 
-  const handleClose = () =>{
-    setIsOpenFrom(false)
-  }
+  const handleClose = () => {
+    setIsOpenFrom(false);
+  };
 
   const onNoteUpdated = (note: INote) => {
     setNotes((notes) =>
@@ -57,7 +57,11 @@ function App() {
       <div>
         <div className="notes-list">{notesElement}</div>
         <span className="material-symbols-outlined circle">add_circle</span>
-        <Form onCreate={onCreate} isOpen={isOpenForm} handleClose={handleClose} />
+        <Form
+          onCreate={onCreate}
+          isOpen={isOpenForm}
+          handleClose={handleClose}
+        />
       </div>
     </div>
   );
