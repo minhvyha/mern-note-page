@@ -23,16 +23,16 @@ function App() {
   };
 
   const updateText = () => {
-    let text = document.getElementById("text-input")?.textContent;
+    const text = document.querySelectorAll('input')[0].value;
     if (text) {
       setText(text);
     }
   };
 
   const updateLink = () => {
-    let link = document.getElementById("link-input")?.textContent;
+    const link = document.querySelectorAll('input')[1].value;
     if (link) {
-      setText(link);
+      setLink(link);
     }
   };
 
@@ -60,6 +60,8 @@ function App() {
   };
 
   const onCreate = async () => {
+    console.log(text)
+    console.log(link)
     await axios.post("http://localhost:3001/createNote", { text, link });
     getNotes();
   };
