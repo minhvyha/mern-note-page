@@ -3,7 +3,7 @@ import React, { FC, FocusEvent } from "react";
 type Props = {
   onCreate: (text: string, link: string) => void;
   handleClose: () => void;
-  isOpen: Boolean
+  isOpen: Boolean;
 };
 
 const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
@@ -11,7 +11,7 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
     <div className="create-container">
       <div className="create-form">
         <div className="form-close-container">
-        <span className="material-symbols-outlined form-close">close</span>
+          <span className="material-symbols-outlined form-close">close</span>
         </div>
         <div className="form-text">
           <span>Text: </span>
