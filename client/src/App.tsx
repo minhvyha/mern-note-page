@@ -16,6 +16,10 @@ function App() {
     setIsOpenFrom(false);
   };
 
+  const handleOpen = () => {
+    setIsOpenFrom(true);
+  };
+
   const onNoteUpdated = (note: INote) => {
     setNotes((notes) =>
       notes.map((oldNote: INote) => {
@@ -56,7 +60,9 @@ function App() {
     <div className="App">
       <div>
         <div className="notes-list">{notesElement}</div>
-        <span className="material-symbols-outlined circle">add_circle</span>
+        <span className="material-symbols-outlined circle" onClick={handleOpen}>
+          add_circle
+        </span>
         <Form
           onCreate={onCreate}
           isOpen={isOpenForm}
