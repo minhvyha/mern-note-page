@@ -7,8 +7,8 @@ import Form from "./components/Form";
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
   const [isOpenForm, setIsOpenFrom] = useState<Boolean>(false);
-  const [text, setText] = useState<String>('')
-  const [link, setLink] = useState<String>('')
+  const [text, setText] = useState<String>("");
+  const [link, setLink] = useState<String>("");
 
   useEffect(() => {
     getNotes();
@@ -22,19 +22,19 @@ function App() {
     setIsOpenFrom(true);
   };
 
-  const updateText = () =>{
-    let text = document.getElementById('text-input')?.textContent
-    if (text){
-      setText(text)
+  const updateText = () => {
+    let text = document.getElementById("text-input")?.textContent;
+    if (text) {
+      setText(text);
     }
-  }
+  };
 
   const updateLink = () => {
-    let link = document.getElementById('link-input')?.textContent
-    if (link){
-      setText(link)
+    let link = document.getElementById("link-input")?.textContent;
+    if (link) {
+      setText(link);
     }
-  }
+  };
 
   const onNoteUpdated = (note: INote) => {
     setNotes((notes) =>
@@ -60,8 +60,8 @@ function App() {
   };
 
   const onCreate = async (text: string, link: string) => {
-    await axios.post('http://localhost:3001/createNote', {text, link})
-    getNotes()
+    await axios.post("http://localhost:3001/createNote", { text, link });
+    getNotes();
   };
 
   let notesElement = notes.map((note) => {
