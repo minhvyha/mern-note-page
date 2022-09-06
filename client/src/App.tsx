@@ -86,6 +86,8 @@ function App() {
           onCreate={onCreate}
           isOpen={isOpenForm}
           handleClose={handleClose}
+          updateLink={updateLink}
+          updateText={updateText}
         />
       </div>
     </div>
