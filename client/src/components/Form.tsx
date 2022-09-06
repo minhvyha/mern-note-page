@@ -30,7 +30,7 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose, updateLink, updateText
         </div>
         <div className="form-btn">
           <button onClick={handleClose}>Close</button>
-          <button>Create</button>
+          <button onClick={onCreate}>Create</button>
         </div>
       </div>
     </div>
