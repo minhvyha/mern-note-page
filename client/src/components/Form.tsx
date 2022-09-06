@@ -11,7 +11,7 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
     <div className="create-container">
       <div className="create-form">
         <div className="form-close-container">
-          <span className="material-symbols-outlined form-close">close</span>
+          <span onClick={handleClose} className="material-symbols-outlined form-close">close</span>
         </div>
         <div className="form-text">
           <span>Text: </span>
@@ -22,7 +22,7 @@ const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
           <input id="link-input" type="text" />
         </div>
         <div className="form-btn">
-          <button>Close</button>
+          <button onClick={handleClose}>Close</button>
           <button>Create</button>
         </div>
       </div>
