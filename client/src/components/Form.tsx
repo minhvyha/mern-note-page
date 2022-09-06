@@ -2,11 +2,11 @@ import React, { FC, FocusEvent } from "react";
 
 type Props = {
   onCreate: (text: string, link: string) => void;
-  
+  handleClose: () => void;
   isOpen: Boolean
 };
 
-const Form: FC<Props> = ({ onCreate }) => {
+const Form: FC<Props> = ({ onCreate, isOpen, handleClose }) => {
   return (
     <div className="create-container">
       <div className="create-form">

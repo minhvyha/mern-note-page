@@ -57,7 +57,7 @@ function App() {
       <div>
         <div className="notes-list">{notesElement}</div>
         <span className="material-symbols-outlined circle">add_circle</span>
-        <Form onCreate={onCreate} isOpen={isOpenForm} />
+        <Form onCreate={onCreate} isOpen={isOpenForm} handleClose={handleClose} />
       </div>
     </div>
   );
