@@ -2,6 +2,7 @@ import React, { FC, FocusEvent } from "react";
 
 type Props = {
   onCreate: (text: string, link: string) => void;
+  isOpen: Boolean
 };
 
 const Form: FC<Props> = ({ onCreate }) => {

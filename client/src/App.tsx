@@ -6,6 +6,7 @@ import Form from "./components/Form";
 
 function App() {
   const [notes, setNotes] = useState<Array<INote>>([]);
+  const [isOpenForm, setIsOpenFrom] = useState<Boolean>(false)
 
   useEffect(() => {
     getNotes();
@@ -52,7 +53,7 @@ function App() {
       <div>
         <div className="notes-list">{notesElement}</div>
         <span className="material-symbols-outlined circle">add_circle</span>
-        <Form onCreate={onCreate} />
+        <Form onCreate={onCreate} isOpen={isOpenForm} />
       </div>
     </div>
   );
