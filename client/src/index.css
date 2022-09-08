@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -9,6 +11,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Inter";
 }
 .App {
   min-height: 100%;
@@ -74,6 +77,10 @@ body,
   border-radius: 2.5px;
   place-self: center;
   font-size: 0.8rem;
+  transition: .2s ease-in-out all;
+}
+.note-link:hover{
+  background-color: rgb(0, 0, 0);
 }
 
 /*========= ICON ========= */
