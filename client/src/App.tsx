@@ -15,9 +15,7 @@ function App() {
     getNotes();
   }, []);
 
-  const hanldeError = () =>{
-
-  }
+  const hanldeError = () => {};
 
   const handleClose = () => {
     setIsOpenFrom(false);
@@ -65,7 +63,7 @@ function App() {
   };
 
   const onCreate = async () => {
-    setIsOpenFrom(false)
+    setIsOpenFrom(false);
     await axios.post("http://localhost:3001/createNote", { text, link });
     getNotes();
   };
