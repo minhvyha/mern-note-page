@@ -35,8 +35,8 @@ const Form: FC<Props> = ({
           <input id="link-input" type="text" onChange={updateLink} />
         </div>
         <div className="form-btn">
-          <button onClick={handleClose}>Close</button>
-          <button onClick={onCreate}>Create</button>
+          <button className="close-button" onClick={handleClose}>Close</button>
+          <button className="create-button" onClick={onCreate}>Create</button>
         </div>
       </div>
     </div>
