@@ -112,14 +112,15 @@ body,
   justify-content: flex-end;
   gap: 0.3rem;
 }
-.form-close-container{
+.form-close-container {
   display: flex;
   justify-content: flex-end;
 }
-.form-close{
+.form-close {
   cursor: pointer;
 }
-.close-button, .create-button{
+.close-button,
+.create-button {
   background-color: transparent;
   border: 1px solid black;
   padding: 4px 8px;
