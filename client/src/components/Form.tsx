@@ -1,4 +1,4 @@
-import React, { FC, FocusEvent } from "react";
+import React, { FC } from "react";
 
 type Props = {
   onCreate: () => void;
