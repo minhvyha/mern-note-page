@@ -73,6 +73,11 @@ function App() {
     getNotes();
   };
 
+ const resetForm = () =>{
+  setText("")
+  setLink("")
+ }
+
   const onCreate = async () => {
     let error = document.getElementById("error-holder");
     if (hanldeError()) {
@@ -86,6 +91,7 @@ function App() {
     }
     setIsOpenFrom(false);
     await axios.post("http://localhost:3001/createNote", { text, link });
+    resetForm()
     getNotes();
   };
 
