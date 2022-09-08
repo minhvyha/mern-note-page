@@ -9,13 +9,14 @@ function App() {
   const [isOpenForm, setIsOpenFrom] = useState<Boolean>(false);
   const [text, setText] = useState<String>("");
   const [link, setLink] = useState<String>("");
+  const [error, setError] = useState<String>("");
 
   useEffect(() => {
     getNotes();
   }, []);
 
   const hanldeError = () =>{
-    
+
   }
 
   const handleClose = () => {
