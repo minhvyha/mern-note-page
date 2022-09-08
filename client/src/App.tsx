@@ -60,8 +60,7 @@ function App() {
   };
 
   const onCreate = async () => {
-    console.log(text);
-    console.log(link);
+    setIsOpenFrom(false)
     await axios.post("http://localhost:3001/createNote", { text, link });
     getNotes();
   };
