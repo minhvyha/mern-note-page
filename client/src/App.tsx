@@ -42,16 +42,12 @@ function App() {
 
   const updateText = () => {
     const text = document.querySelectorAll("input")[0].value;
-    if (text) {
-      setText(text);
-    }
+    setText(text);
   };
 
   const updateLink = () => {
     const link = document.querySelectorAll("input")[1].value;
-    if (link) {
-      setLink(link);
-    }
+    setLink(link);
   };
 
   const onNoteUpdated = (note: INote) => {
@@ -78,6 +74,16 @@ function App() {
   };
 
   const onCreate = async () => {
+    let error = document.getElementById("error-holder");
+    if (hanldeError()) {
+      if (error != null) {
+        error.style.display = "block";
+      }
+      return;
+    }
+    if (error != null) {
+      error.style.display = "none";
+    }
     setIsOpenFrom(false);
     await axios.post("http://localhost:3001/createNote", { text, link });
     getNotes();
@@ -104,6 +110,7 @@ function App() {
         <Form
           onCreate={onCreate}
           isOpen={isOpenForm}
+          error={error}
           handleClose={handleClose}
           updateLink={updateLink}
           updateText={updateText}

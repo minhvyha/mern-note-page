@@ -5,12 +5,14 @@ type Props = {
   handleClose: () => void;
   updateText: () => void;
   updateLink: () => void;
+  error: String;
   isOpen: Boolean;
 };
 
 const Form: FC<Props> = ({
   onCreate,
   isOpen,
+  error,
   handleClose,
   updateLink,
   updateText,
@@ -26,6 +28,7 @@ const Form: FC<Props> = ({
             close
           </span>
         </div>
+        <div className="error" id="error-holder"></div>
         <div className="form-text">
           <span>Text: </span>
           <input id="text-input" type="text" onChange={updateText} />
