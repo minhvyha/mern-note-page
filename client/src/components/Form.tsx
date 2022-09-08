@@ -28,7 +28,9 @@ const Form: FC<Props> = ({
             close
           </span>
         </div>
-        <div className="error" id="error-holder"></div>
+        <div className="error" id="error-holder">
+          {error}
+        </div>
         <div className="form-text">
           <span>Text: </span>
           <input id="text-input" type="text" onChange={updateText} />
