@@ -128,4 +128,8 @@ body,
 }
 .error {
   display: none;
+  margin: .5rem 0;
+  background-color: #fad2cf;
+  padding: .2rem .3rem;
+  border-radius: 2px;
 }
