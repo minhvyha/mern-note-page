@@ -18,7 +18,11 @@ const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
     };
     onNoteUpdated(newNote);
   };
-
+  const getClickableLink = (link: string) => {
+    return link.startsWith("http://") || link.startsWith("https://")
+      ? link
+      : `http://${link}`;
+  };
   const onDeleteNote = () => {
     onDelete(note);
   };
@@ -36,7 +40,7 @@ const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
       >
         {note.text}
       </h4>
-      <a href={note.link} className="note-link">
+      <a href={getClickableLink(note.link)} className="note-link" target='_blank'>
         Link
       </a>
     </div>
