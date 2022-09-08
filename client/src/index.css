@@ -63,7 +63,7 @@ body,
   text-align: center;
   font-weight: 400;
   width: 100%;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 .note-link {
   display: block;
@@ -73,7 +73,7 @@ body,
   text-decoration: none;
   border-radius: 2.5px;
   place-self: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 /*========= ICON ========= */
