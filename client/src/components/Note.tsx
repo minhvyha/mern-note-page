@@ -37,7 +37,7 @@ const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
         {note.text}
       </h4>
       <a href={note.link} className="note-link">
-        {note.link}
+        Link
       </a>
     </div>
   );
