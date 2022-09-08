@@ -40,7 +40,11 @@ const Note: FC<Props> = ({ note, onNoteUpdated, onDelete }) => {
       >
         {note.text}
       </h4>
-      <a href={getClickableLink(note.link)} className="note-link" target='_blank'>
+      <a
+        href={getClickableLink(note.link)}
+        className="note-link"
+        target="_blank"
+      >
         Link
       </a>
     </div>
