@@ -119,6 +119,9 @@ body,
 .form-close{
   cursor: pointer;
 }
-.close-button{
-  
+.close-button, .create-button{
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 4px 8px;
+  border-radius: 3px;
 }
