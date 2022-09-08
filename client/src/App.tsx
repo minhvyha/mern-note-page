@@ -14,6 +14,10 @@ function App() {
     getNotes();
   }, []);
 
+  const hanldeError = () =>{
+    
+  }
+
   const handleClose = () => {
     setIsOpenFrom(false);
   };
