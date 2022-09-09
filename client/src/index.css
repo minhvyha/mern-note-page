@@ -89,7 +89,7 @@ body,
   width: max-content;
 }
 .material-symbols-outlined.circle {
-  position: absolute;
+  position: fixed;
   bottom: 8%;
   right: 8%;
   font-size: 38px;
